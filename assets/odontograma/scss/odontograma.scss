@@ -1,0 +1,1398 @@
+$categoria_18_11: 18 17 16 15 14 13 12 11 21 22 23 25 26 27 28 55 54 53 52 51 61 62 63 64 65 85 84 83 82 81 71 72 73 74 75 48 47 46 45 44 43 42 41 31 32 33 34 35 36 37 38;
+#dibujar{
+	#pieza{
+		max-width: 60px;
+		position: relative;
+		img{
+			width: 100%;
+			vertical-align: middle;
+			&.rotar{
+				transform: rotate(180deg);
+			}
+		}
+		.direccionPieza{
+			background-size: 100%;
+			background-repeat: no-repeat;
+			background-position: center center;
+			position: absolute;
+		}
+		
+		&.categoria-centro{
+			#direccionPieza{
+				&-centro{
+					bottom: 10%;
+					width: 100%;
+					height: 20px;
+					background-size: 50%;
+					&.lesionCaries{
+						background-image: url('../images/marcador_malorelleno_center.png');
+					}
+					&.sellantes{
+						&.bueno{
+							background-image: url('../images/marcador_bueno_center.png');
+						}
+						&.malo{
+							background-image: url('../images/marcador_malo_center.png');
+						}
+					}
+					&.restauracionTemporal{
+						background-image: url('../images/marcador_malo_center.png');
+					}
+					&.restauracionDefinitiva{
+						&.bueno{
+							background-image: url('../images/marcador_buenorelleno_center.png');
+						}
+						&.malo{
+							background-image: url('../images/marcador_malorelleno_center.png');
+						}
+					}
+					&.giro{
+						top: 10.5%;
+					}
+				}
+				&-arriba,&-abajo{
+					width: 100%;
+					height: 10px;
+					background-size: 90% 90%;
+					&.lesionCaries{
+						background-image: url('../images/marcador01_malorelleno_top_bottom.png');
+					}
+					&.sellantes{
+						&.bueno{
+							background-image: url('../images/marcador01_bueno_top_bottom.png');
+						}
+						&.malo{
+							background-image: url('../images/marcador01_malo_top_bottom.png');
+						}
+					}
+					&.restauracionTemporal{
+						background-image: url('../images/marcador01_malo_top_bottom.png');
+					}
+					&.restauracionDefinitiva{
+						&.bueno{
+							background-image: url('../images/marcador01_buenorelleno_top_bottom.png');
+						}
+						&.malo{
+							background-image: url('../images/marcador01_malorelleno_top_bottom.png');
+						}
+					}
+				}
+				&-arriba{
+					top: 55%;
+					&.giro{
+						top: 0;
+					}
+				}
+				&-abajo{
+					bottom: 1%;
+					transform: rotate(180deg);
+					&.giro{
+						top: 33%;
+					}
+				}
+				&-derecha,&-izquierda{
+					width: 15px;
+					height: 38px;
+					background-size: 90% 90%;
+					bottom: 0%;
+					&.lesionCaries{
+						background-image: url('../images/marcador01_malorelleno_left_right.png');
+					}
+					&.sellantes{
+						&.bueno{
+							background-image: url('../images/marcador01_bueno_left_right.png');
+						}
+						&.malo{
+							background-image: url('../images/marcador01_malo_left_right.png');
+						}
+					}
+					&.restauracionTemporal{
+						background-image: url('../images/marcador01_malo_left_right.png');
+					}
+					&.restauracionDefinitiva{
+						&.bueno{
+							background-image: url('../images/marcador01_buenorelleno_left_right.png');
+						}
+						&.malo{
+							background-image: url('../images/marcador01_malorelleno_left_right.png');
+						}
+					}
+					
+					&.giro{
+						top: 0%;
+					}
+				}
+				&-derecha{
+					right: 0;
+					transform: rotate(180deg);
+				}
+			}
+		}
+
+		&.categoria-nocentro{
+			#direccionPieza{
+				&-arriba,&-abajo{
+					width: 98%;
+					height: 18px;
+					&.lesionCaries{
+						background-image: url('../images/marcador02_malorelleno_top_bottom.png');
+					}
+					&.sellantes{
+						&.bueno{
+							background-image: url('../images/marcador02_bueno_top_bottom.png');
+						}
+						&.malo{
+							background-image: url('../images/marcador02_malo_top_bottom.png');
+						}
+					}
+					&.restauracionTemporal{
+						background-image: url('../images/marcador02_malo_top_bottom.png');
+					}
+					&.restauracionDefinitiva{
+						&.bueno{
+							background-image: url('../images/marcador02_buenorelleno_top_bottom.png');
+						}
+						&.malo{
+							background-image: url('../images/marcador02_malorelleno_top_bottom.png');
+						}
+					}
+				}
+				&-arriba{
+					top: 55%;
+					&.giro{
+						top: 0;
+					}
+				}
+				&-abajo{
+					bottom: 1%;
+					transform: rotate(180deg);
+					&.giro{
+						top: 22%;
+					}
+				}
+				&-izquierda,&-derecha{
+					width: 12px;
+					height: 38px;
+					background-size: 90% 90%;
+					&.lesionCaries{
+						background-image: url('../images/marcador02_malorelleno_left_right.png');
+					}
+					&.sellantes{
+						&.bueno{
+							background-image: url('../images/marcador02_bueno_left_right.png');
+						}
+						&.malo{
+							background-image: url('../images/marcador02_malo_left_right.png');
+						}
+					}
+					&.restauracionTemporal{
+						background-image: url('../images/marcador02_malo_left_right.png');
+					}
+					&.restauracionDefinitiva{
+						&.bueno{
+							background-image: url('../images/marcador02_buenorelleno_left_right.png');
+						}
+						&.malo{
+							background-image: url('../images/marcador02_malorelleno_left_right.png');
+						}
+					}
+					
+					bottom: 0%;
+					&.giro{
+						top: 0;
+					}
+				}
+				&-derecha{
+					right: 1%;
+					transform: rotate(180deg);
+				}
+			}
+		}
+		
+	}
+
+	//@each $num in $piezas_tres{
+	//	.pieza-#{$num}{
+	//		color:white;
+	//	}
+	//}
+}
+#odontograma{
+  display: flex;
+  align-items: start;
+	justify-content: center;
+	padding: 2%;
+}
+$anchoTotal:  100%;
+$anchoDiente: ($anchoTotal / 16);
+$altoDiente: 9.6%;
+$altoDienteCentro: 9.7%;
+
+#odontograma-contenido{
+	position: relative;
+	img{
+		vertical-align: middle;
+	}
+	
+	.cursor{
+		position: absolute;
+		width: $anchoDiente;
+		z-index: 1000;
+		&:hover{
+			cursor: pointer;
+			border-radius: 3px;
+			box-shadow: inset 0 0 0 1px #111;
+			
+		}
+	}
+
+	&.unico .cursor:hover{
+		border-radius: 3px;
+		background-color: #26bc8a;
+		&:before{
+			content:'SEL';
+			position: absolute;
+			left: 25%;
+			color: white;
+			top: 35%;
+		}
+	}
+
+	&.detalle .cursor:hover{
+		border-radius: 3px;
+		background-color: #ee600d;
+		&:before{
+			content:'DET';
+			position: absolute;
+			left: 25%;
+			color: white;
+			top: 35%;
+		}
+	}
+
+	&.inicio .cursor:hover, &.fin .cursor:hover, .inicioSelec{
+		background-color: #26bc8a;
+		&:before{
+			content:'INI';
+			position: absolute;
+			left: 25%;
+			color: white;
+			top: 35%;
+		}
+	}
+
+	&.fin .cursor:hover:before{
+		content:'FIN';
+	}
+
+	.recuadro{
+		position: absolute;
+		width: $anchoDiente;
+		height: 2.5%;
+		font-size: 8.5px;
+		word-wrap: break-word;
+		font-weight: 100;
+		span{
+			display: inline;
+			letter-spacing: 0.2px;
+			line-height: 0%;
+			&.bueno{
+				color:#0040FF;
+			}
+			&.malo{
+				color:#FF0000;
+			}
+		}
+	}
+	
+	.hallazgos{
+		width: $anchoDiente;
+		position: absolute;
+		background-position-x: center;
+		background-repeat: no-repeat;
+	}
+	
+	.corona, .coronaTemporal{
+		background-size: 90% auto;
+		&.bueno{
+			background-image: url('../images/corona_buen.png');
+		}
+		&.malo{
+			background-image: url('../images/corona_mal.png');
+		}
+	}
+
+	.erupcion{
+		height: 4.8%;
+		background-image: url('../images/erupcion.png');
+	}
+
+	.aparatoOrtoFijoInicio{
+		height: 2.65%;
+		background-size: 100% 100%;
+		&.bueno{
+			background-image: url('../images/AparatoOrtoFijoBueno.png');
+		}
+		&.malo{
+			background-image: url('../images/AparatoOrtoFijoMalo.png');
+		}
+	}
+
+	.aparatoOrtoFijoFin{
+		height: 2.65%;
+		background-size: 100% 100%;
+		transform: rotate(180deg);
+		&.bueno{
+			background-image: url('../images/AparatoOrtoFijoBueno.png');
+		}
+		&.malo{
+			background-image: url('../images/AparatoOrtoFijoMalo.png');
+		}
+	}
+
+	.linea{
+		height: 2.65%;
+		background-size: 100% 100%;
+		&.bueno{
+			background-image: url('../images/lineaBuena.png');
+		}
+		&.malo{
+			background-image: url('../images/lineaMala.png');
+		}
+	}
+
+	.aparatoOrtoRemovible{
+		height: 3.1%;
+		background-size: 100%;
+		&.bueno{
+			background-image: url('../images/AparatoOrtoRemovibleBueno.png');
+		}
+		&.malo{
+			background-image: url('../images/AparatoOrtoRemovibleMalo.png');
+		}
+	}
+
+	.diastema{
+		background-size: 100%;
+		background-image: url('../images/diastema.png');
+		width: 1%;
+		height: 4%;
+	}
+
+	.piezaAusente{
+		background-position-x: center;
+		background-size: 50% 100%;
+		background-image: url('../images/dienteAusente.png');
+		height: 9%;
+	}
+
+	.piezaClavija{
+		background-position-x: center;
+		background-size: 92% 100%;
+		background-image: url('../images/piezaClavija.png');
+		height: 4.5%;
+	}
+
+	.piezaExtruida, .piezaIntruida{
+		background-position-x: center;
+		background-size: 30%;
+		background-image: url('../images/piezaFlecha.png');
+		height: 2.6%;
+	}
+
+	.piezaSupernumeraria{
+		background-image: url('../images/supernumeraria.png');
+		height: 3.2%;
+	}
+
+	.edentulo{
+		background-image: url('../images/edentulo.png');
+		height: 0.5%;
+		background-repeat: repeat-x;
+	}
+
+	.munon{
+		height: 7%;
+		background-size: 36%;
+		&.bueno{
+			background-image: url('../images/munonBueno.png');
+		}
+		&.malo{
+			background-image: url('../images/munonMalo.png');
+		}
+	}
+
+	.fusion{
+		background-image: url('../images/fusion.png');
+		height: 4%;
+		background-size: 100% 80%;
+		width: $anchoDiente + 3.5%;
+	}
+
+	.fracturaCoronal{
+		height: 0.4%;
+		background-image: url('../images/fracturaCoronal.png');
+		background-size: 80%;
+	}
+
+	.fracturaIncisal{
+		height: 2.5%;
+		background-image: url('../images/fracturaIncisal.png');
+		width: $anchoDiente - 4.1%;
+		background-size: 100%;
+	}
+
+	.fracturaRaizCorona{
+		height: 5.5%;
+		background-image: url('../images/fracturaRaizCorona.png');
+		width: $anchoDiente - 1%;
+		background-size: 100%;
+	}
+
+	.geminasion{
+		height: 3.7%;
+		background-image: url('../images/geminasion.png');
+		background-size: 50%;
+	}
+
+	.giroversion{
+		height: 3.7%;
+		&Distal{
+			background-image: url('../images/distal.png');
+		}
+		&Mesial{
+			background-image: url('../images/mesial.png');
+		}
+	}
+
+	.protesisFijaInicio{
+		height: 2.65%;
+		background-size: 100% 100%;
+		&.bueno{
+			background-image: url('../images/protesisFijaBuenoInicio.png');
+		}
+		&.malo{
+			background-image: url('../images/protesisFijaMaloInicio.png');
+		}
+	}
+
+	.protesisFijaFin{
+		height: 2.65%;
+		background-size: 100% 100%;
+		&.bueno{
+			background-image: url('../images/protesisFijaBuenoFin.png');
+		}
+		&.malo{
+			background-image: url('../images/protesisFijaMaloFin.png');
+		}
+	}
+
+	.protesisRemovible{
+		height: 1.8%;
+		&.bueno{
+			background-image: url('../images/protesisRemovibleBueno.png');
+		}
+		&.malo{
+			background-image: url('../images/protesisRemovibleMalo.png');
+		}
+	}
+
+	.protesisTotal{
+		height: 1.8%;
+		&.bueno{
+			background-image: url('../images/protesisRemovibleBueno.png');
+		}
+		&.malo{
+			background-image: url('../images/protesisRemovibleMalo.png');
+		}
+	}
+
+	.transposicion{
+		height: 2.8%;
+		background-image: url('../images/transposicion.png');
+		background-size: 100%;
+	}
+
+	.tratamientoPulparTC-PC{
+		height: 6.5%;
+		background-size: 100%;
+		&.bueno{
+			background-image: url('../images/tratamientoPulparTCBueno.png');
+		}
+		&.malo{
+			background-image: url('../images/tratamientoPulparTCMalo.png');
+		}
+	}
+
+	.tratamientoPulparPP{
+		height: 3.2%;
+		background-size: 40%;
+		&.bueno{
+			background-image: url('../images/tratamientoPulparPPBueno.png');
+		}
+		&.malo{
+			background-image: url('../images/tratamientoPulparPPMalo.png');
+		}
+	}
+
+	.direccion-derecha,.direccion-izquierda{
+		height: 4%;
+		width: 1.2%;
+		background-size: 100% 100%;
+		&.centro{
+			&.lesionCaries{
+				background-image: url('../images/marcador01_malorelleno_left_right.png');
+			}
+			&.sellantes{
+				&.bueno{
+					background-image: url('../images/marcador01_bueno_left_right.png');
+				}
+				&.malo{
+					background-image: url('../images/marcador01_malo_left_right.png');
+				}
+			}
+			&.restauracionTemporal{
+				background-image: url('../images/marcador01_malo_left_right.png');
+			}
+			&.restauracionDefinitiva{
+				&.bueno{
+					background-image: url('../images/marcador01_buenorelleno_left_right.png');
+				}
+				&.malo{
+					background-image: url('../images/marcador01_malorelleno_left_right.png');
+				}
+			}
+		}
+		&.nocentro{
+			&.lesionCaries{
+				background-image: url('../images/marcador02_malorelleno_left_right.png');
+			}
+			&.sellantes{
+				&.bueno{
+					background-image: url('../images/marcador02_bueno_left_right.png');
+				}
+				&.malo{
+					background-image: url('../images/marcador02_malo_left_right.png');
+				}
+			}
+			&.restauracionTemporal{
+				background-image: url('../images/marcador02_malo_left_right.png');
+			}
+			&.restauracionDefinitiva{
+				&.bueno{
+					background-image: url('../images/marcador02_buenorelleno_left_right.png');
+				}
+				&.malo{
+					background-image: url('../images/marcador02_malorelleno_left_right.png');
+				}
+			}
+		}
+	}
+
+	.direccion-arriba,.direccion-abajo{
+		height: 1.2%;
+		width: 5.2%;
+		background-size: 100% 100%;
+		&.centro{
+			&.lesionCaries{
+				background-image: url('../images/marcador01_malorelleno_top_bottom.png');
+			}
+			&.sellantes{
+				&.bueno{
+					background-image: url('../images/marcador01_bueno_top_bottom.png');
+				}
+				&.malo{
+					background-image: url('../images/marcador01_malo_top_bottom.png');
+				}
+			}
+			&.restauracionTemporal{
+				background-image: url('../images/marcador01_malo_top_bottom.png');
+			}
+			&.restauracionDefinitiva{
+				&.bueno{
+					background-image: url('../images/marcador01_buenorelleno_top_bottom.png');
+				}
+				&.malo{
+					background-image: url('../images/marcador01_malorelleno_top_bottom.png');
+				}
+			}
+		}
+		&.nocentro{
+			height: 2%;
+			&.lesionCaries{
+				background-image: url('../images/marcador02_malorelleno_top_bottom.png');
+			}
+			&.sellantes{
+				&.bueno{
+					background-image: url('../images/marcador02_bueno_top_bottom.png');
+				}
+				&.malo{
+					background-image: url('../images/marcador02_malo_top_bottom.png');
+				}
+			}
+			&.restauracionTemporal{
+				background-image: url('../images/marcador02_malo_top_bottom.png');
+			}
+			&.restauracionDefinitiva{
+				&.bueno{
+					background-image: url('../images/marcador02_buenorelleno_top_bottom.png');
+				}
+				&.malo{
+					background-image: url('../images/marcador02_malorelleno_top_bottom.png');
+				}
+			}
+		}
+	}
+
+	.direccion-abajo,.direccion-derecha{
+		transform: rotate(180deg);
+	}
+
+	.direccion-centro{
+		height: 1.9%;
+		width: 2.5%;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		&.lesionCaries{
+			background-image: url('../images/marcador_malorelleno_center.png');
+		}
+		&.sellantes{
+			&.bueno{
+				background-image: url('../images/marcador_bueno_center.png');
+			}
+			&.malo{
+				background-image: url('../images/marcador_malo_center.png');
+			}
+		}
+		&.restauracionTemporal{
+			background-image: url('../images/marcador_malo_center.png');
+		}
+		&.restauracionDefinitiva{
+			&.bueno{
+				background-image: url('../images/marcador_buenorelleno_center.png');
+			}
+			&.malo{
+				background-image: url('../images/marcador_malorelleno_center.png');
+			}
+		}
+		
+	}
+
+
+	//CUADRANTE UNO
+	@for $i from 1 through 16{
+		.cursor-#{$i} {
+			height: $altoDiente;
+			top: 9.2%;
+			left: (($i - 1) * $anchoDiente);
+		}
+
+		.recuadro-#{$i} {
+			top: 0%;
+			left: (($i - 1) * $anchoDiente);
+		}
+		.corona-#{$i}, .coronaTemporal-#{$i}{
+			height: $altoDiente;
+			left: (($i - 1) * $anchoDiente);
+			top: 9.1%;
+			background-position-y: bottom;
+		}
+
+		.erupcion-#{$i}{
+			left: (($i - 1) * $anchoDiente);
+			top: 9.8%;
+			background-position-y: 35%;
+		}
+
+		.aparatoOrtoFijoInicio-#{$i},.aparatoOrtoFijoFin-#{$i}, .linea-#{$i}{
+			left: (($i - 1) * $anchoDiente);
+			top: 3.5%;
+		}
+
+		.aparatoOrtoRemovible-#{$i}{
+			left: (($i - 1) * $anchoDiente);
+			top: 3.6%;
+		}
+
+		.diastema-#{$i}{
+			left: (($i - 1) * $anchoDiente)+5.8%;
+			top: 15%;
+		}
+
+		.piezaAusente-#{$i}{
+			left: (($i - 1) * $anchoDiente);
+			top: 10%;
+		}
+
+		.piezaClavija-#{$i}{
+			left: (($i - 1) * $anchoDiente);
+			top: 5.5%;
+		}
+
+		.piezaExtruida-#{$i}{
+			left: (($i - 1) * $anchoDiente);
+			top: 18.5%;
+			transform: rotate(180deg);
+		}
+		
+		.piezaIntruida-#{$i}{
+			left: (($i - 1) * $anchoDiente);
+			top: 18.5%;
+		}
+
+		.piezaSupernumeraria-#{$i}{
+			left: (($i - 1) * $anchoDiente)+3%;
+			top: 7%;
+		}
+
+		.edentulo-#{$i}{
+			left: (($i - 1) * $anchoDiente);
+			top: 16.5%;
+		}
+
+		.munon-#{$i}{
+			left: (($i - 1) * $anchoDiente);
+			top: 11%;
+		}
+
+		.fusion-#{$i}{
+			left: (($i - 1) * $anchoDiente) + 1.5%;
+			top: 7%;
+		}
+
+		.fracturaCoronal-#{$i}{
+			left: (($i - 1) * $anchoDiente);
+			top: 14.5%;
+		}
+
+		.fracturaIncisal-#{$i}{
+			left: (($i - 1) * $anchoDiente) + 3.8%;
+			top: 16.5%;
+		}
+
+		.fracturaRaizCorona-#{$i}{
+			left: (($i - 1) * $anchoDiente) + 0.8%;
+			top: 12%;
+		}
+
+		.geminasion-#{$i}{
+			left: (($i - 1) * $anchoDiente);
+			top: 6.4%;
+		}
+
+		.giroversionDistal-#{$i}, .giroversionMesial-#{$i}{
+			left: (($i - 1) * $anchoDiente);
+			top: 20%;
+		}
+
+		.protesisFijaInicio-#{$i}, .protesisFijaFin-#{$i}{
+			left: (($i - 1) * $anchoDiente);
+			top: 4.6%;
+		}
+
+		.protesisRemovible-#{$i}{
+			left: (($i - 1) * $anchoDiente);
+			top: 4.5%;
+		}
+
+		.protesisTotal-#{$i}{
+			left: (($i - 1) * $anchoDiente);
+			top: 16%;
+		}
+
+		.transposicion-#{$i}{
+			left: (($i - 1) * $anchoDiente) + 3%;
+			top: 5%;
+		}
+
+		.tratamientoPulparTC-PC-#{$i}{
+			left: (($i - 1) * $anchoDiente);
+			top: 10%;
+		}
+
+		.tratamientoPulparPP-#{$i}{
+			left: (($i - 1) * $anchoDiente);
+			top: 16%;
+		}
+
+		.direccion-arriba-#{$i}{
+			left: (($i - 1) * $anchoDiente) + 0.6%;
+			top: 14.6%;
+		}
+
+		.direccion-abajo-#{$i}{
+			left: (($i - 1) * $anchoDiente) + 0.6%;
+			top: 17.5%;
+			&.nocentro{
+				top: 16.7%;
+			}
+		}
+
+		.direccion-izquierda-#{$i}{
+			left: (($i - 1) * $anchoDiente) + 0.55%;
+			top: 14.6%;
+		}
+
+		.direccion-derecha-#{$i}{
+			left: (($i - 1) * $anchoDiente) + 4.6%;
+			top: 14.6%;
+		}
+
+		.direccion-centro-#{$i}{
+			left: (($i - 1) * $anchoDiente) + 1.9%;
+			top: 15.9%;
+		}
+
+	}
+
+	//CUADRANTE DOS
+	@for $i from 17 through 26{
+		.cursor-#{$i} {
+			height: $altoDienteCentro;
+			top: 31.5%;
+			left: ($i - 14) * $anchoDiente;
+		}
+
+		.recuadro-#{$i} {
+			top: 23%;
+			left: (($i - 14) * $anchoDiente);
+		}
+
+		.corona-#{$i}, .coronaTemporal-#{$i}{
+			height: $altoDienteCentro;
+			left: (($i - 14) * $anchoDiente);
+			top: 33%;
+			background-position-y: 62%;
+		}
+
+		.erupcion-#{$i}{
+			left: (($i - 14) * $anchoDiente);
+			top: 32%;
+			background-position-y: 35%;
+		}
+
+		.aparatoOrtoFijoInicio-#{$i}, .aparatoOrtoFijoFin-#{$i}, .linea-#{$i}{
+			left: (($i - 14) * $anchoDiente);
+			top: 27%;
+		}
+
+		.aparatoOrtoRemovible-#{$i}{
+			left: (($i - 14) * $anchoDiente);
+			top: 27%;
+		}
+
+		.diastema-#{$i}{
+			left: (($i - 14) * $anchoDiente)+5.8%;
+			top: 36.5%;
+		}
+
+		.piezaAusente-#{$i}{
+			left: (($i - 14) * $anchoDiente);
+			top: 32%;
+		}
+
+		.piezaClavija-#{$i}{
+			left: (($i - 14) * $anchoDiente);
+			top: 43.7%;
+		}
+
+		.piezaExtruida-#{$i}{
+			left: (($i - 14) * $anchoDiente);
+			top: 40.4%;
+			transform: rotate(180deg);
+		}
+
+		.piezaIntruida-#{$i}{
+			left: (($i - 14) * $anchoDiente);
+			top: 40.4%;
+		}
+
+		.piezaSupernumeraria-#{$i}{
+			left: (($i - 14) * $anchoDiente)+3.2%;
+			top: 44%;
+		}
+
+		.edentulo-#{$i}{
+			left: (($i - 14) * $anchoDiente);
+			top: 38.2%;
+		}
+
+		.munon-#{$i}{
+			left: (($i - 14) * $anchoDiente);
+			top: 32.7%;
+		}
+
+		.fusion-#{$i}{
+			left: (($i - 14) * $anchoDiente) + 1.5%;
+			top: 45%;
+		}
+
+		.fracturaCoronal-#{$i}{
+			left: (($i - 14) * $anchoDiente);
+			top: 36.4%;
+		}
+
+		.fracturaIncisal-#{$i}{
+			left: (($i - 14) * $anchoDiente) + 3.8%;
+			top: 38.2%;
+		}
+
+		.fracturaRaizCorona-#{$i}{
+			left: (($i - 14) * $anchoDiente) + 0.7%;
+			top: 33.5%;
+		}
+
+		.geminasion-#{$i}{
+			left: (($i - 14) * $anchoDiente);
+			top: 44.8%;
+		}
+
+		.giroversionDistal-#{$i}, .giroversionMesial-#{$i}{
+			left: (($i - 14) * $anchoDiente);
+			top: 41.5%;
+		}
+
+		.protesisFijaInicio-#{$i}, .protesisFijaFin-#{$i}{
+			left: (($i - 14) * $anchoDiente);
+			top: 28.2%;
+		}
+
+		.protesisRemovible-#{$i}{
+			left: (($i - 14) * $anchoDiente);
+			top: 28%;
+		}
+
+		.protesisTotal-#{$i}{
+			left: (($i - 14) * $anchoDiente);
+			top: 37.6%;
+		}
+
+		.transposicion-#{$i}{
+			left: (($i - 14) * $anchoDiente) + 3%;
+			top: 43%;
+		}
+
+		.tratamientoPulparTC-PC-#{$i}{
+			left: (($i - 14) * $anchoDiente);
+			top: 32%;
+		}
+
+		.tratamientoPulparPP-#{$i}{
+			left: (($i - 14) * $anchoDiente);
+			top: 37.6%;
+		}
+
+		.direccion-arriba-#{$i}{
+			left: (($i - 14) * $anchoDiente) + 0.6%;
+			top: 36.5%;
+		}
+
+		.direccion-abajo-#{$i}{
+			left: (($i - 14) * $anchoDiente) + 0.6%;
+			top: 39.2%;
+			&.nocentro{
+				top: 38.5%;
+			}
+		}
+
+		.direccion-izquierda-#{$i}{
+			left: (($i - 14) * $anchoDiente) + 0.6%;
+			top: 36.4%;
+		}
+
+		.direccion-derecha-#{$i}{
+			left: (($i - 14) * $anchoDiente) + 4.6%;
+			top: 36.4%;
+		}
+
+		.direccion-centro-#{$i}{
+			left: (($i - 14) * $anchoDiente) + 1.9%;
+			top: 37.5%;
+		}
+		
+	}
+	
+	//CUADRANTE TRES
+	@for $i from 27 through 36{
+		.cursor-#{$i} {
+			height: $altoDienteCentro;
+			top: 57.5%;
+			left: ($i - 24) * $anchoDiente;
+		}
+
+		.recuadro-#{$i} {
+			top: 72.7%;
+			left: (($i - 24) * $anchoDiente);
+		}
+
+		.corona-#{$i}, .coronaTemporal-#{$i}{
+			height: $altoDienteCentro;
+			left: (($i - 24) * $anchoDiente)-0.1%; //CORRECCION
+			top: 55.9%;
+			background-position-y: 41%;
+		}
+
+		.erupcion-#{$i}{
+			left: (($i - 24) * $anchoDiente);
+			top: 62%;
+			background-position-y: 35%;
+			transform: rotate(180deg);
+		}
+
+		.aparatoOrtoFijoInicio-#{$i}, .aparatoOrtoFijoFin-#{$i}, .linea-#{$i}{
+			left: (($i - 24) * $anchoDiente);
+			top: 68.5%;
+		}
+
+		.aparatoOrtoRemovible-#{$i}{
+			left: (($i - 24) * $anchoDiente);
+			top: 68%;
+			transform: rotate(180deg);
+		}
+
+		.diastema-#{$i}{
+			left: (($i - 24) * $anchoDiente)+5.8%;
+			top: 58%;
+		}
+
+		.piezaAusente-#{$i}{
+			left: (($i - 24) * $anchoDiente);
+			top: 58%;
+		}
+
+		.piezaClavija-#{$i}{
+			left: (($i - 24) * $anchoDiente);
+			top: 49.3%;
+		}
+
+		.piezaExtruida-#{$i}{
+			left: (($i - 24) * $anchoDiente);
+			top: 55.7%;
+		}
+
+		.piezaIntruida-#{$i}{
+			left: (($i - 24) * $anchoDiente);
+			top: 55.7%;
+			transform: rotate(180deg);
+		}
+
+		.piezaSupernumeraria-#{$i}{
+			left: (($i - 24) * $anchoDiente)+3.2%;
+			top: 51%;
+		}
+
+		.edentulo-#{$i}{
+			left: (($i - 24) * $anchoDiente);
+			top: 60%;
+		}
+
+		.munon-#{$i}{
+			left: (($i - 24) * $anchoDiente);
+			top: 59%;
+			transform: rotate(180deg);
+		}
+
+		.fusion-#{$i}{
+			left: (($i - 24) * $anchoDiente) + 1.5%;
+			top: 50.5%;
+		}
+
+		.fracturaCoronal-#{$i}{
+			left: (($i - 24) * $anchoDiente);
+			top: 62%;
+		}
+
+		.fracturaIncisal-#{$i}{
+			left: (($i - 24) * $anchoDiente) + 0.5%;
+			top: 58%;
+		}
+
+		.fracturaRaizCorona-#{$i}{
+			left: (($i - 24) * $anchoDiente) + 0.5%;
+			top: 60%;
+		}
+
+		.geminasion-#{$i}{
+			left: (($i - 24) * $anchoDiente);
+			top: 50%;
+		}
+
+		.giroversionDistal-#{$i}, .giroversionMesial-#{$i}{
+			left: (($i - 24) * $anchoDiente);
+			top: 53.5%;
+			transform: rotate(180deg);
+		}
+
+		.protesisFijaInicio-#{$i}{
+			left: (($i - 24) * $anchoDiente);
+			top: 67.3%;
+			transform: rotate(180deg);
+			&.bueno{
+				background-image: url('../images/protesisFijaBuenoFin.png') !important;
+			}
+			&.malo{
+				background-image: url('../images/protesisFijaMaloFin.png') !important;
+			}
+		}
+
+		.protesisFijaFin-#{$i}{
+			left: (($i - 24) * $anchoDiente);
+			top: 67.3%;
+			transform: rotate(180deg);
+			&.bueno{
+				background-image: url('../images/protesisFijaBuenoInicio.png') !important;
+			}
+			&.malo{
+				background-image: url('../images/protesisFijaMaloInicio.png') !important;
+			}
+		}
+
+		.protesisRemovible-#{$i}{
+			left: (($i - 24) * $anchoDiente);
+			top: 68.5%;
+		}
+
+		.protesisTotal-#{$i}{
+			left: (($i - 24) * $anchoDiente);
+			top: 59.2%;
+		}
+
+		.transposicion-#{$i}{
+			left: (($i - 24) * $anchoDiente) + 3%;
+			transform: rotate(180deg);
+			top: 53%;
+		}
+
+		.tratamientoPulparTC-PC-#{$i}{
+			left: (($i - 24) * $anchoDiente);
+			top: 60%;
+		}
+
+		.tratamientoPulparPP-#{$i}{
+			left: (($i - 24) * $anchoDiente);
+			top: 59.4%;
+		}
+
+		.direccion-arriba-#{$i}{
+			left: (($i - 24) * $anchoDiente) + 0.6%;
+			top: 58.1%;
+		}
+
+		.direccion-abajo-#{$i}{
+			left: (($i - 24) * $anchoDiente) + 0.6%;
+			top: 60.9%;
+			&.nocentro{
+				top: 60%;
+			}
+		}
+
+		.direccion-izquierda-#{$i}{
+			left: (($i - 24) * $anchoDiente) + 0.7%;
+			top: 58.1%;
+		}
+
+		.direccion-derecha-#{$i}{
+			left: (($i - 24) * $anchoDiente) + 4.7%;
+			top: 58.1%;
+		}
+
+		.direccion-centro-#{$i}{
+			left: (($i - 24) * $anchoDiente) + 1.9%;
+			top: 59.2%;
+		}
+	}
+
+	//CUADRANTE CUATRO
+	@for $i from 37 through 52{
+		.cursor-#{$i} {
+			height: $altoDiente;
+			top: 79.8%;
+			left: ($i - 37) * $anchoDiente;
+		}
+
+		.recuadro-#{$i} {
+			bottom: 0;
+			left: (($i - 37) * $anchoDiente);
+		}
+
+		.corona-#{$i}, .coronaTemporal-#{$i}{
+			height: $altoDienteCentro;
+			left: (($i - 37) * $anchoDiente);
+			top: 80.6%;
+			background-position-y: top;
+		}
+
+		.erupcion-#{$i}{
+			left: (($i - 37) * $anchoDiente);
+			top: 84.5%;
+			background-position-y: 35%;
+			transform: rotate(180deg);
+		}
+
+		.aparatoOrtoFijoInicio-#{$i}, .aparatoOrtoFijoFin-#{$i}, .linea-#{$i}{
+			left: (($i - 37) * $anchoDiente);
+			top: 93.5%;
+		}
+
+		.aparatoOrtoRemovible-#{$i}{
+			left: (($i - 37) * $anchoDiente);
+			top: 93%;
+			transform: rotate(180deg);
+		}
+
+		.diastema-#{$i}{
+			left: (($i - 37) * $anchoDiente)+5.8%;
+			top: 80.5%;
+		}
+
+		.piezaAusente-#{$i}{
+			left: (($i - 37) * $anchoDiente);
+			top: 80.5%;
+		}
+
+		.piezaClavija-#{$i}{
+			left: (($i - 37) * $anchoDiente);
+			top: 88.3%;
+		}
+
+		.piezaExtruida-#{$i}{
+			left: (($i - 37) * $anchoDiente);
+			top: 78%;
+		}
+
+		.piezaIntruida-#{$i}{
+			left: (($i - 37) * $anchoDiente);
+			top: 78%;
+			transform: rotate(180deg);
+		}
+
+		.piezaSupernumeraria-#{$i}{
+			left: (($i - 37) * $anchoDiente)+3.2%;
+			top: 89.5%;
+		}
+
+		.edentulo-#{$i}{
+			left: (($i - 37) * $anchoDiente);
+			top: 82.5%;
+		}
+
+		.munon-#{$i}{
+			left: (($i - 37) * $anchoDiente);
+			top: 81%;
+			transform: rotate(180deg);
+		}
+
+		.fusion-#{$i}{
+			left: (($i - 37) * $anchoDiente) + 1.5%;
+			top: 89.4%;
+		}
+
+		.fracturaCoronal-#{$i}{
+			left: (($i - 37) * $anchoDiente);
+			top: 84.4%;
+		}
+
+		.fracturaIncisal-#{$i}{
+			left: (($i - 37) * $anchoDiente) + 0.5%;
+			top: 80.5%;
+		}
+
+		.fracturaRaizCorona-#{$i}{
+			left: (($i - 37) * $anchoDiente) + 0.5%;
+			top: 82.5%;
+		}
+
+		.geminasion-#{$i}{
+			left: (($i - 37) * $anchoDiente);
+			top: 89%;
+		}
+
+		.giroversionDistal-#{$i}, .giroversionMesial-#{$i}{
+			left: (($i - 37) * $anchoDiente);
+			top: 76%;
+			transform: rotate(180deg);
+		}
+
+		.protesisFijaInicio-#{$i}{
+			left: (($i - 37) * $anchoDiente);
+			top: 92.4%;
+			transform: rotate(180deg);
+			&.bueno{
+				background-image: url('../images/protesisFijaBuenoFin.png') !important;
+			}
+			&.malo{
+				background-image: url('../images/protesisFijaMaloFin.png') !important;
+			}
+		}
+
+		.protesisFijaFin-#{$i}{
+			left: (($i - 37) * $anchoDiente);
+			top: 92.4%;
+			transform: rotate(180deg);
+			&.bueno{
+				background-image: url('../images/protesisFijaBuenoInicio.png') !important;
+			}
+			&.malo{
+				background-image: url('../images/protesisFijaMaloInicio.png') !important;
+			}
+		}
+
+		.protesisRemovible-#{$i}{
+			left: (($i - 37) * $anchoDiente);
+			top: 93.5%;
+		}
+
+		.protesisTotal-#{$i}{
+			left: (($i - 37) * $anchoDiente);
+			top: 81.5%;
+		}
+
+		.transposicion-#{$i}{
+			left: (($i - 37) * $anchoDiente) + 3%;
+			transform: rotate(180deg);
+			top: 92%;
+		}
+
+		.tratamientoPulparTC-PC-#{$i}{
+			left: (($i - 37) * $anchoDiente);
+			top: 82%;
+		}
+
+		.tratamientoPulparPP-#{$i}{
+			left: (($i - 37) * $anchoDiente);
+			top: 81.83%;
+		}
+
+		.direccion-arriba-#{$i}{
+			left: (($i - 37) * $anchoDiente) + 0.6%;
+			top: 80.5%;
+		}
+
+		.direccion-abajo-#{$i}{
+			left: (($i - 37) * $anchoDiente) + 0.6%;
+			top: 83.5%;
+			&.nocentro{
+				top: 82.5%;
+			}
+		}
+
+		.direccion-izquierda-#{$i}{
+			left: (($i - 37) * $anchoDiente) + 0.6%;
+			top: 80.5%;
+		}
+
+		.direccion-derecha-#{$i}{
+			left: (($i - 37) * $anchoDiente) + 4.7%;
+			top: 80.5%;
+		}
+
+		.direccion-centro-#{$i}{
+			left: (($i - 37) * $anchoDiente) + 1.9%;
+			top: 81.7%;
+		}
+
+	}
+
+
+
+}

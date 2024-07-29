@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		title Odontograma
+		link(rel="stylesheet", href="css/odontograma.css")
+	body
+	//#dibujar
+		#pieza.categoria-centro
+			img(src="images/pieza_dos.png", alt="")
+			.direccionPieza#direccionPieza-arriba.lesionCaries
+			.direccionPieza#direccionPieza-abajo.lesionCaries
+			.direccionPieza#direccionPieza-izquierda.lesionCaries
+			.direccionPieza#direccionPieza-derecha.lesionCaries
+			.direccionPieza#direccionPieza-centro.lesionCaries
+	#odontograma
+		#odontograma-contenido
+			img(src="images/plantilla_nuevo11.png",width=800)
+			include cursores.pug
+			include hallazgos.pug
+		script(src="js/jquery.min.js")
+		script(src="js/main.js")

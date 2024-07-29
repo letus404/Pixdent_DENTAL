@@ -1,0 +1,58 @@
+<% 
+	function arrayColumn(array, columnName) {
+	    return array.map(function(value,index) {
+	        return value[columnName];
+	    })
+	}
+	var uniqueArray = function(arrArg) {
+	  return arrArg.filter(function(elem, pos,arr) {
+	    return arr.indexOf(elem) == pos;
+	  });
+	};
+	var horas = arrayColumn(by_hour, 'start_hour');
+	horas = uniqueArray(horas);
+	
+	horasArray = {};
+	horas.forEach(function(element) {
+	  horasArray[element] = [];
+	});
+
+	by_hour.forEach(function(element) {
+	  horasArray[element.start_hour].push(element);
+	});
+
+ %>
+<div id="cal-day-box" >
+	<div class="row">
+		<div class="col-md-12 table-responsive">
+			<table  class="table table-striped table-bordered table-condensed table-hover" cellspacing="0" cellpadding="0" width="100%" >
+				<thead>
+					<tr>
+						<th style="background-color: #00c0ef; color: white; text-align: center;">Hora Inicio</th>
+						<th  style="background-color: #00c0ef; color: white; text-align: center;">Hora Fin</th>
+						<th  style="background-color: #00c0ef; color: white; text-align: center;">Paciente</th>
+						<th  style="background-color: #00c0ef; color: white; text-align: center;">Telefono</th>
+						<th  style="background-color: #00c0ef; color: white; text-align: center;">Doctor</th>
+						<th  style="background-color: #00c0ef; color: white; text-align: center;">Estado Cita</th>
+						<th  style="background-color: #00c0ef; color: white; text-align: center;">Opciones</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% _.each(horasArray, function(e,i){ %>
+						<% _.each(e, function(event,indice){  %>
+					<tr>
+						<td ><i class="fa fa-clock-o fa-1" aria-hidden="true"></i> &nbsp<%= event.inicio %></td>
+						<td><%= event.fin %></td>
+						<td><%= event.title %></td>
+						<td><i class="fa fa-mobile fa-1" aria-hidden="true"></i> &nbsp <%= event.telefono %></td>
+						<td><i class="fa fa-user-md" aria-hidden="true"></i> &nbsp Dr(a)<%= event.medico %></td>
+						<td><%= event.estado %></td>
+						<td style="text-align: center;"><div class="dropdown">  <div class="btn btn-default dropdown-toggle btn-mini-opc" type="button" data-toggle="dropdown" style="padding:5px 5px;" aria-expanded="false">     <span class="caret"></span>                    </div>         <ul class="dropdown-menu dropdown-menu-right">  <li><a href="#" onclick="openModalRegistro_Diario('3670','');"><i class="fa fa-pencil-square-o fa-1" aria-hidden="true"></i> Visualizar</a></li>  <li><a href="#" onclick="openModal_EstadoCuenta('2070');"><i class="fa fa-money" aria-hidden="true"></i> Estado de Cuenta</a></li>  <li class="divider"></li>     </ul> </div></td>
+					</tr>
+						<% }); %>
+					<% }); %>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

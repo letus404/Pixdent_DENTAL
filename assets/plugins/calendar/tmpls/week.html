@@ -1,0 +1,27 @@
+
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Hora</th>
+			<% _.each(days_name, function(name) { %>
+				<th><%= name %></th>
+				<% start.setDate(start.getDate() + 1); %>
+			<% }) %>
+		</tr>
+	</thead>
+	<tbody>
+		<% _.each(cal.horasSemana, function(val) { %>
+		<tr>
+			<td><b><%= val.Hora %></b></td>
+			<td><%= val[1] %></td>
+			<td><%= val[2] %></td>
+			<td><%= val[3] %></td>
+			<td><%= val[4] %></td>
+			<td><%= val[5] %></td>
+			<td><%= val[6] %></td>
+			<td><%= val[7] %></td>
+		</tr>		
+		
+		<% }) %>
+	</tbody>
+</table>

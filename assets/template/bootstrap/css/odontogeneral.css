@@ -1,0 +1,18 @@
+.odoPiezaTextBox {
+    font-size: 11px;
+    text-align: left;
+}
+
+.odon-cursor {
+   
+}
+#diente_18 {
+    position: absolute;
+    left: 19px;
+    top: 71px;
+    width: 36px;
+    height: 81px;
+    z-index: 20;
+}
+
+
