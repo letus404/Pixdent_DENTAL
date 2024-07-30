@@ -29,7 +29,7 @@ class Auth extends CI_Controller
 	public function login()
 	{
 		$username= $this->input->post("username");
-		$paswoord= $this->input->post("paswoord");
+		$password= $this->input->post("password");
 		$res = $this->usuarios_model->login($username,sha1($paswoord));
 		$logo =$this->clinica_model->getclinica($data);
 		$plan = $this->clinica_model->getplanes($data);
