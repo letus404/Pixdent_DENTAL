@@ -42,19 +42,7 @@ class Auth extends CI_Controller
             $plan = $this->clinica_model->getplanes($res->codi_usu);
             $roles = $this->clinica_model->getUserRol($res->codi_usu);
             $medico = $this->modelgeneral->getTableWhereRow('medico', ['codi_usu' => $res->codi_usu]);
-
-			if ($plan === null) {
-				$this->session->set_flashdata("error", "No se encontraron planes asociados.");
-				redirect(base_url());
-				return;
-			}
-			 // Verificar si $medico es null
-			 if ($medico === null) {
-				$this->session->set_flashdata("error", "No se encontraron datos del médico.");
-				redirect(base_url());
-				return;
-			}
-			
+            
             $data = array(
                 'codi_usu' => $res->codi_usu,
                 'apellido' => $res->apellido,
