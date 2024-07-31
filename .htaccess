@@ -2,7 +2,11 @@ Options +FollowSymLinks
 Options -Indexes
 DirectoryIndex index.html index.php
 RewriteEngine on
-RewriteCond $1 !^(index\.php|images|robots\.txt)
+
+# Ajustar el RewriteBase a la ruta correcta de tu proyecto
+RewriteBase /pixdent/
+
+RewriteCond $1 !^(index\.php|images|robots\.txt|assets)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /demo/index.php/$1 [L,QSA]
+RewriteRule ^(.*)$ index.php/$1 [L,QSA]
